@@ -1,0 +1,35 @@
+@use 'variables' as v; 
+@use 'mixins' as m;
+
+h1, h2, h3 {
+    margin: 0;
+    line-height: 1.5;
+    font-family: v.$fuenteHeading;
+    font-weight: 400;
+}
+h1 {
+    font-size: 4rem;
+    @include m.desktop{
+        font-size: 5rem;
+    }
+}
+h2 {
+    font-size: 3.5rem;
+    @include m.desktop{
+        font-size: 4rem;
+    }
+}
+h3 {
+    font-size: 2.4rem;
+}
+[class$="heading"] {
+    margin: 2rem 0;
+}
+a {
+    font-weight: 300;
+    text-decoration: none;
+    font-family: v.$fuentePrincipal;
+}
+p {
+    font-size: 2rem;
+}

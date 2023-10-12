@@ -1,0 +1,93 @@
+@use '../bases/variables' as v; 
+@use '../bases/mixins' as m;
+
+/* Productos
+----------------------------------------------------------*/
+.productos{
+    padding: 7rem 0;
+    @include m.tablet{
+        width: 90%;
+        padding: 8rem 0 ;
+    }
+    @include m.desktop{
+        width: 80%;
+    }
+
+    &__heading{
+        text-align: center;
+        line-height: 1;
+        margin-top: 0;
+    }
+    &__texto{
+        text-align: center;
+        color: v.$beige;
+        text-transform: uppercase;
+        margin-bottom: 7rem;
+        letter-spacing: 2px;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        @include m.desktop{
+            font-size: 1.7rem;
+            margin-bottom: 10rem;
+        }
+    }
+    &__grid{
+        @include m.grid(2, 1rem);
+        @include m.tablet{
+            @include m.grid(2, 2rem);
+        }
+        @include m.desktop{
+            @include m.grid(4, 2rem);
+        }
+    }
+}
+.producto{
+    &__imgContainer{
+        overflow: hidden;
+    }
+    &__img{
+        // transition: all .25s ease;
+        transition-property: transform;
+        transition-duration: 250ms;
+        height: 15rem;
+        object-fit: cover;
+        @include m.tablet{
+            height: unset;
+        }
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+    &__info{
+        background-color: v.$blanco;
+        padding: 2rem;
+    }
+    &__heading{
+        color: v.$beige;
+        text-align: center;
+        margin-top: 0;
+        font-size: 2.6rem;
+        @include m.tablet{
+            font-size: 3rem;
+        }
+    }
+    &__description{
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        line-height: 1.8;
+        text-align: center;
+        @include m.tablet{
+            font-size: 1.5rem;
+        }
+    }
+    &__precio{
+        text-align: center;
+        font-size: 2rem;
+        margin: 0;
+        color: v.$beige;
+        @include m.tablet{
+            font-size: 2.8rem;
+        }
+    }
+
+}

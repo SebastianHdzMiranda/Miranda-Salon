@@ -1,0 +1,84 @@
+@use '../bases/variables' as v; 
+@use '../bases/mixins' as m;
+
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: #fdfaf6;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 84px;
+    bottom: 0;
+    z-index: 3;
+    height: 0;
+    // height: calc(100% - 59px);
+    overflow: hidden;
+    transition: opacity .35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+    @include m.tablet{
+        height: unset;
+        flex-direction: row;
+        gap: 2rem;
+        position: unset;
+        opacity: 1;
+    }
+    @include m.desktop{
+        gap: 2.5rem;
+    }
+    &__enlace{
+        font-size: 3rem;
+        color: lighten(v.$negro, 35%); 
+        padding-bottom: .3rem;
+        @include m.tablet{
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;  
+        }
+        @include m.desktop{
+            font-size: 1.6rem;
+        }
+
+        &--activo{
+            border-bottom: 1px solid v.$negro;
+        }
+        &:nth-child(4){
+            margin-bottom: 10rem;
+            @include m.tablet{
+                margin-bottom: 0;
+            }
+        }
+        &:last-of-type{
+            letter-spacing: 3px;
+            color: lighten(v.$beige, 5%);
+            font-size: 3rem;
+            border-bottom: 1px solid v.$beige;
+            padding: 1rem 4rem;
+            transition: all .3s ease;
+            position: absolute;
+            bottom: 22px;
+            &:hover{
+                background-color: v.$beige;
+                color: v.$blanco;
+                border: none;
+            }
+
+            @include m.tablet{
+                position: unset;
+                font-size: 1.75rem;
+                padding: 1.3rem 2rem;
+                margin-left: 1rem;
+            }
+            @include m.desktop{
+                font-size: 1.8rem;
+            }
+        }
+    }
+    &--activo{
+        height: calc(100% - 84px);
+        opacity: 1;
+    }
+}

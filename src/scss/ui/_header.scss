@@ -1,0 +1,45 @@
+@use '../bases/variables' as v; 
+@use '../bases/mixins' as m;
+
+/* Header
+----------------------------------------------------------*/
+
+.header{
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    width: 96%;
+    max-width: 96%;
+    margin: 0 auto;
+    @include m.tablet{
+        padding: 1rem 0;
+        width: 96%;
+        max-width: 96%;
+        margin: 0 auto;
+        
+    }
+    &__link{
+        padding: 0.8rem;
+    }
+    &__logo{
+        width: 6rem;
+        display: inline;
+        @include m.tablet{
+            width: 8rem;
+            padding-bottom: 3rem;
+            margin: 0 auto;
+            padding-bottom: unset;
+            display: block;
+        }
+    }
+    &__iconMenu{
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
+        @include m.tablet{
+            display: none;
+        }
+    }
+    &__icon{
+        width: 3rem;
+    }
+}
