@@ -16,19 +16,19 @@
         }
         
         &[href*="facebook.com"]::before{
-            background-image: url(../img/icono_facebook.svg);
+            background-image: url(../../assets/img/icono_facebook.svg);
         }
         &[href*="twitter.com"]::before{
-            background-image: url(../img/icono_twitter.svg);
+            background-image: url(../../assets/img/icono_twitter.svg);
         }
         &[href*="instagram.com"]::before{
-            background-image: url(../img/icono_instagram.svg);
+            background-image: url(../../assets/img/icono_instagram.svg);
         }
         &[href*="youtube.com"]::before{
-            background-image: url(../img/icono_youtube.svg);
+            background-image: url(../../assets/img/icono_youtube.svg);
         }
         &[href*="tiktok.com"]::before{
-            background-image: url(../img/icono_tiktok.svg);
+            background-image: url(../../assets/img/icono_tiktok.svg);
         }
     }
 

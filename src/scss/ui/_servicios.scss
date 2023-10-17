@@ -51,7 +51,8 @@
         transition-property: rotate scale;
         transition-duration: 300ms;
         // height: 30rem;
-        padding-bottom: 100%;
+        // padding-bottom: 100%;
+        aspect-ratio: 1/1;
         
         &:hover{
             transform: scale(1.1) rotate(7deg);
