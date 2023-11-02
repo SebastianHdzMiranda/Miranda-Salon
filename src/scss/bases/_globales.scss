@@ -38,3 +38,29 @@ ul {
 .seccion {
     padding: 8rem 0;
 }
+
+.anim {
+    opacity: 0;
+}
+
+@keyframes anim1 {
+    from {
+        opacity: 0;
+
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes anim2 {
+    from {
+        transform: translateY(-35px);
+        opacity: 0;
+
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

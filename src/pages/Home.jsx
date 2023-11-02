@@ -9,7 +9,7 @@ import Testimoniales from "../components/testimoniales/testimoniales";
 
 const Home = ()=> {
     return (<>
-        <Banner />
+        <Banner/>
         <Servicios /> 
         <Testimoniales />
         <Conocenos />

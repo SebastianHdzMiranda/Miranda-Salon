@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import Testimonial from "./testimonial";
+import AnimationContainer from "../Animaciones/animaciones";
 // import 'swiper/css';
 
 const Testimoniales = ()=> {
@@ -33,16 +34,18 @@ const Testimoniales = ()=> {
     ]
 
     return(
-        <div className="testimoniales">
-            <h2 className="testimoniales__heading">Lo que dicen nuestros Clientes</h2>
-            <section className="swiper mySwiper">
-                <Testimonial testimoniales={testimoniales}/>
-                
-                <div className="swiper-button-next"></div>
-                <div className="swiper-button-prev"></div>
-                <div className="swiper-pagination"></div>
-            </section>
-        </div>
+        <AnimationContainer>
+            <div className="testimoniales anim">
+                <h2 className="testimoniales__heading">Lo que dicen nuestros Clientes</h2>
+                <section className="swiper mySwiper">
+                    <Testimonial testimoniales={testimoniales}/>
+                    
+                    <div className="swiper-button-next"></div>
+                    <div className="swiper-button-prev"></div>
+                    <div className="swiper-pagination"></div>
+                </section>
+            </div>
+        </AnimationContainer>
     );
 }
 
